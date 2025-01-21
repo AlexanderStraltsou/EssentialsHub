@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EssentialsHub</string>
+    <string name="app_description">Plan and manage your travel packing lists effortlessly.</string>
+    <string name="weekend_trip">Weekend Trip</string>
+    <string name="sunny_week">Sunny Holiday</string>
+    <string name="work_trip">Work Trip</string>
+    <string name="default_list_title">Packing List</string>
+    <string name="add_item">Add Item</string>
+    <string name="delete_item"> Delete Item</string>
+    <string name="mark_important">Mark as Important</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
