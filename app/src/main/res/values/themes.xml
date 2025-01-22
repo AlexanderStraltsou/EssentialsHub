@@ -1,9 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.EssentialsHub" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+    <style name="Theme.EssentialsHub" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorBackground</item>
 
-    <style name="Theme.EssentialsHub" parent="Base.Theme.EssentialsHub" />
+        <!-- Secondary/Accent Colors -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorTextPrimary</item>
+
+        <!-- Backgrounds -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <item name="colorSurface">@color/colorBackground</item>
+        <item name="colorOnSurface">@color/colorTextPrimary</item>
+
+        <!-- Text -->
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+    </style>
 </resources>
