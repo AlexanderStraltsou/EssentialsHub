@@ -8,8 +8,11 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.essentialshub.databinding.ActivityMainBinding
+import androidx.activity.viewModels
+import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
+    private val packingListViewModel: PackingListViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +34,8 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack(null) // This adds the transaction to the back stack for navigation
             .commit()
     }
+
+
 }
 
 

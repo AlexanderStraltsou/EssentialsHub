@@ -7,14 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.essentialshub.databinding.FragmentListBinding
+import androidx.fragment.app.activityViewModels
 
 class ListFragment : Fragment() {
     private var _binding: FragmentListBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var listAdapter: PackingListAdapter
+    private val packingListViewModel: PackingListViewModel by activityViewModels()
 
-
+    /*
     private val weekendTripItems = mutableListOf(
         PackingItem("Toothbrush"),
         PackingItem("Shampoo"),
@@ -50,6 +52,8 @@ class ListFragment : Fragment() {
         PackingItem("Power Bank"),
         PackingItem("Headphones")
     )
+    */
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,12 +62,13 @@ class ListFragment : Fragment() {
         _binding = FragmentListBinding.inflate(inflater, container, false)
         return binding.root
     }
-
+    /*
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val listType = arguments?.getString("listType") ?: "Packing List"
         binding.tvListTitle.text = listType
+
 
         // Select items based on listType
         val items = when (listType) {
@@ -84,6 +89,30 @@ class ListFragment : Fragment() {
                 binding.etNewItem.text?.clear()
             } else {
 
+                binding.etNewItem.error = "Please enter an item name"
+            }
+        }
+    }
+    */
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val listType = arguments?.getString("listType") ?: "Packing List"
+        binding.tvListTitle.text = listType
+
+        // Retrieve the list for the given type from ViewModel
+        val items = packingListViewModel.getItemsForListType(listType)
+
+        listAdapter = PackingListAdapter(items)
+        binding.rvItems.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvItems.adapter = listAdapter
+
+        binding.btnAddItem.setOnClickListener {
+            val newItemName = binding.etNewItem.text.toString().trim()
+            if (newItemName.isNotEmpty()) {
+                listAdapter.addItem(newItemName)
+                binding.etNewItem.text?.clear()
+            } else {
                 binding.etNewItem.error = "Please enter an item name"
             }
         }
