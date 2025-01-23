@@ -1,11 +1,9 @@
 package com.example.essentialshub
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.example.essentialshub.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
@@ -23,7 +21,6 @@ class StartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Set up button click listeners to navigate to ListFragment
         binding.btnWeekendTrip.setOnClickListener {
             (activity as? MainActivity)?.navigateToListFragment("Weekend Trip")
         }
@@ -32,6 +29,9 @@ class StartFragment : Fragment() {
         }
         binding.btnWorkTrip.setOnClickListener {
             (activity as? MainActivity)?.navigateToListFragment("Work Trip")
+        }
+        binding.btnCreateCustomList.setOnClickListener {
+            (activity as? MainActivity)?.navigateToListFragment("Custom List")
         }
     }
 

@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
     fun navigateToListFragment(listType: String) {
         val listFragment = ListFragment.newInstance(listType)
         supportFragmentManager.beginTransaction()
-            .replace(binding.navHostFragment.id, listFragment) // This replaces the current fragment
-            .addToBackStack(null) // This adds the transaction to the back stack for navigation
+            .replace(binding.navHostFragment.id, listFragment)
+            .addToBackStack(null)
             .commit()
     }
 

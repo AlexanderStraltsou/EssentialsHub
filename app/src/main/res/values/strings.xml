@@ -1,13 +1,21 @@
 <resources>
     <string name="app_name">EssentialsHub</string>
     <string name="app_logo">App Logo</string>
-    <string name="app_description">Plan and manage your travel packing lists effortlessly.</string>
+    <string name="headline_text">WELCOME TO ESSENTIALS HUB</string>
+    <string name="first_text">EssentialsHub is an application designed to simplify your packing process for any trip.</string>
+    <string name="second_text">Whether you are planning a weekend getaway, a sunny vacation, or a work trip, this app ensures you never forget the essentials.</string>
     <string name="weekend_trip">Weekend Trip</string>
     <string name="sunny_week">Sunny Holiday</string>
+    <string name="check_box_text">Packed</string>
+    <string name="item_name_text">Item Name</string>
+    <string name="add_item_text">Add Item</string>
+    <string name="enter_item_name_text">Enter Item Name</string>
+    <string name="list_title_text">List Title</string>
     <string name="work_trip">Work Trip</string>
+    <string name="create_custom_list">My Custom List</string>
     <string name="default_list_title">Packing List</string>
     <string name="add_item">Add Item</string>
-    <string name="delete_item"> Delete Item</string>
+    <string name="delete_item">Delete Item</string>
     <string name="mark_important">Mark as Important</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

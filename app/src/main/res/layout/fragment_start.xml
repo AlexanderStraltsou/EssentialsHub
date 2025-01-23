@@ -13,40 +13,55 @@
         android:gravity="top"
         android:padding="16dp">
 
-        <!-- Logo Image -->
+
         <ImageView
             android:id="@+id/ivLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/logo"
-        android:layout_gravity="center"
-        android:contentDescription="@string/app_logo"
-        android:adjustViewBounds="true"
-        android:maxHeight="380dp"
-         />
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_logo"
+            android:adjustViewBounds="true"
+            android:maxHeight="380dp" />
 
-        <!-- Title Text -->
         <TextView
-            android:id="@+id/tvWelcomeTitle"
+            android:id="@+id/welcomeHeadline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EssentialsHub is an application designed to simplify your packing process for any trip. Whether you're planning a weekend getaway, a sunny vacation, or an important work trip, EssentialsHub application ensures you never forget the essentials!"
-            android:padding="16dp"
-            android:textSize="20sp"
+            android:text="@string/headline_text"
+            android:textSize="24sp"
             android:textStyle="bold"
-
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="20dp"
             />
 
-        <!-- Buttons -->
+        <TextView
+            android:id="@+id/firstText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_text"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/secondText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/second_text"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp" />
+
         <Button
             android:id="@+id/btnWeekendTrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-
             android:text="@string/weekend_trip"
             android:layout_marginBottom="8dp" />
 
@@ -55,7 +70,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-
             android:text="@string/sunny_week"
             android:layout_marginBottom="8dp" />
 
@@ -64,8 +78,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-
+            android:layout_marginBottom="8dp"
             android:text="@string/work_trip" />
+
+        <Button
+            android:id="@+id/btnCreateCustomList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/create_custom_list" />
 
     </LinearLayout>
 </ScrollView>
